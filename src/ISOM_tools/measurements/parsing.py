@@ -15,7 +15,7 @@ def get_measurement_info(filename: str):
         The method returns a dictionary, containing the information paresd out of the filename.
     """
     info_string = filename[:-4] #cut off the .dat file extension
-    print(info_string)
+    #print(info_string)
     info_list = info_string.split('_')
     info_dict = {
         'sampleID': info_list[0],

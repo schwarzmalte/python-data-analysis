@@ -31,6 +31,7 @@ def bright_IV_prep(filename: str, surface: float):
         'information': info,
         'data': data
     }
+    #print("DONE")
     return data_prepared
 
 def read_IV_dat(filename: str):
@@ -97,9 +98,9 @@ def get_MPP(data: pd.DataFrame):
         Maximum Power Operation Point.
     """
     data['P'] = data['V']*data['J']
-    print('done')
+    #print('done')
     index_Voc = (data['J']-0).abs().idxmin()
-    index_MPP = data['Power'][:index_Voc].abs().idxmax() #what is the MPP position within the negative quadrant, below Voc
+    index_MPP = data['P'][:index_Voc].abs().idxmax() #what is the MPP position within the negative quadrant, below Voc
     V_MPP = data['V'][index_MPP]
     J_MPP = data['J'][index_MPP]
     return V_MPP, J_MPP
