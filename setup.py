@@ -7,7 +7,7 @@ LONG_DESCRIPTION = 'This package contains the python methods that I used to trea
 # Setting up
 setup(
        
-        name="python_tools", 
+        name="ISOM_tools", 
         version=VERSION,
         author="Malte Schwarz",
         author_email="<malte.d.schwarz@gmail.com>",
